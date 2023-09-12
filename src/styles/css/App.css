@@ -95,4 +95,24 @@ body {
   top: 100px;
 }
 
+.shadows {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  column-gap: 10px;
+}
+
+.letter-shadow {
+  font-size: 150px;
+  font-weight: 900;
+  background-color: #0c0a16;
+  color: transparent;
+  text-shadow: 3px 3px 8px #1c102e;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
 /*# sourceMappingURL=App.css.map */

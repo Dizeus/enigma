@@ -6,7 +6,7 @@ interface LetterShadowProps {
 const LetterShadow: React.FC<LetterShadowProps> = ({letter}) => {
     return (
         <div className='letter-shadow'>
-            letter
+            {letter}
         </div>
     );
 };
