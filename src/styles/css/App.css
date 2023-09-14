@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "Bored to death";
+  src: url("../../assets/fonts/Bored.otf");
+}
 /*null styles*/
 * {
   padding: 0;
@@ -77,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 body {
-  font-family: "Sans Serif", Jost;
+  font-family: "Sans Serif", "Bored to death";
   color: white;
   transition: all 0.3s ease-in-out 0s;
 }
@@ -113,6 +117,202 @@ body {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
+  cursor: default;
+}
+
+.letter-light {
+  text-shadow: 0px 0px 70px #bfae18;
+}
+
+.done {
+  font-size: 150px;
+  font-weight: 900;
+  color: #0c0a16;
+}
+
+.letter {
+  color: #0c0a16;
+  font-size: 150px;
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: grab;
+}
+.letter:hover {
+  animation-play-state: paused;
+}
+
+.letter-E {
+  top: 76px;
+  left: 343px;
+  animation: E_trajectory 7s linear 0s infinite alternate;
+}
+
+@keyframes E_trajectory {
+  0% {
+    top: 99px;
+    left: 48px;
+  }
+  25% {
+    top: 192px;
+    left: 180px;
+  }
+  50% {
+    top: 67px;
+    left: 112px;
+  }
+  75% {
+    top: 184px;
+    left: 80px;
+  }
+  100% {
+    top: 200px;
+    left: 180px;
+  }
+}
+.letter-N {
+  top: 375px;
+  left: 60px;
+  animation: N_trajectory 7s linear 0s infinite alternate;
+}
+
+@keyframes N_trajectory {
+  0% {
+    top: 291px;
+    left: 162px;
+  }
+  25% {
+    top: 88px;
+    left: 540px;
+  }
+  50% {
+    top: 248px;
+    left: 567px;
+  }
+  75% {
+    top: 90px;
+    left: 36px;
+  }
+  100% {
+    top: 154px;
+    left: 240px;
+  }
+}
+.letter-I {
+  top: 159px;
+  left: 40px;
+  animation: I_trajectory 7s linear 0s infinite alternate;
+}
+
+@keyframes I_trajectory {
+  0% {
+    top: 9px;
+    left: 90px;
+  }
+  25% {
+    top: 285px;
+    left: 20px;
+  }
+  50% {
+    top: 92px;
+    left: 405px;
+  }
+  75% {
+    top: 290px;
+    left: 48px;
+  }
+  100% {
+    top: 180px;
+    left: 162px;
+  }
+}
+.letter-G {
+  top: 104px;
+  left: 96px;
+  animation: G_trajectory 7s linear 0s infinite alternate;
+}
+
+@keyframes G_trajectory {
+  0% {
+    top: 67px;
+    left: 144px;
+  }
+  25% {
+    top: 33px;
+    left: 126px;
+  }
+  50% {
+    top: 59px;
+    left: 140px;
+  }
+  75% {
+    top: 212px;
+    left: 60px;
+  }
+  100% {
+    top: 140px;
+    left: 810px;
+  }
+}
+.letter-M {
+  top: 120px;
+  left: 72px;
+  animation: M_trajectory 7s linear 0s infinite alternate;
+}
+
+@keyframes M_trajectory {
+  0% {
+    top: 210px;
+    left: 432px;
+  }
+  25% {
+    top: 200px;
+    left: 270px;
+  }
+  50% {
+    top: 126px;
+    left: 280px;
+  }
+  75% {
+    top: 28px;
+    left: 630px;
+  }
+  100% {
+    top: 384px;
+    left: 216px;
+  }
+}
+.letter-A {
+  top: 50px;
+  left: 135px;
+  animation: A_trajectory 7s linear 0s infinite alternate;
+}
+
+@keyframes A_trajectory {
+  0% {
+    top: 295px;
+    left: 36px;
+  }
+  25% {
+    top: 96px;
+    left: 270px;
+  }
+  50% {
+    top: 15px;
+    left: 84px;
+  }
+  75% {
+    top: 13px;
+    left: 72px;
+  }
+  100% {
+    top: 70px;
+    left: 10px;
+  }
+}
+.positioned {
+  display: none;
 }
 
 /*# sourceMappingURL=App.css.map */

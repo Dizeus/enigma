@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
 
-
+@mixin font($font-family, $font-file) {
+    @font-face {
+        font-family: $font-family;
+        src: url($font-file);
+    }
+}
+@include font('Bored to death', '../../assets/fonts/Bored.otf');
 /*null styles*/
 *{padding: 0;margin: 0;border: 0;}
 *,*:before,*:after{-webkit-box-sizing: border-box !important;-moz-box-sizing: border-box !important;-ms-box-sizing: border-box !important;box-sizing: border-box !important;}
@@ -20,7 +26,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
 
 body{
-    font-family: 'Sans Serif', Jost;
+    font-family: 'Sans Serif', 'Bored to death';
     color: white;
     transition: all 0.3s ease-in-out 0s;
 }
@@ -56,4 +62,59 @@ body{
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
+    cursor: default;
+}
+.letter-light{
+    text-shadow: 0px 0px 70px #bfae18;
+}
+.done{
+    font-size: 150px;
+    font-weight: 900;
+    color: #0c0a16;
+}
+.letter{
+    color: #0c0a16;
+    font-size: 150px;
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: grab;
+    &:hover{
+        animation-play-state: paused;
+    }
+}
+$letters: E, N, I, G, M, A;
+@each $letter in $letters {
+    .letter-#{$letter} {
+        top: random(100)*random(5)+px;
+        left: random(10)*random(10)*random(10)+px;
+        animation: #{$letter}_trajectory  7s linear 0s infinite alternate;
+    }
+
+    @keyframes #{$letter}_trajectory {
+        0%{
+            top: random(100)*random(5)+px;
+            left: random(10)*random(10)*random(10)+px;
+        }
+        25%{
+            top: random(100)*random(5)+px;
+            left: random(10)*random(10)*random(10)+px;
+        }
+        50%{
+            top: random(100)*random(5)+px;
+            left: random(10)*random(10)*random(10)+px;
+        }
+        75%{
+            top: random(100)*random(5)+px;
+            left: random(10)*random(10)*random(10)+px;
+        }
+        100%{
+            top: random(100)*random(5)+px;
+            left: random(10)*random(10)*random(10)+px;
+        }
+    }
+}
+.positioned{
+    display: none;
 }

@@ -9,7 +9,7 @@ const Background = () => {
     }, []);
 
     const particlesLoaded = useCallback(async (container: Container | undefined) => {
-        await console.log(container);
+
     }, []);
     return (
         <div className='background'>
@@ -88,7 +88,6 @@ const Background = () => {
                     detectRetina: true,
                 }}
             />
-            <div>Hello World</div>
         </div>
     );
 };
