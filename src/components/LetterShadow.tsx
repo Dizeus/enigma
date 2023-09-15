@@ -27,6 +27,7 @@ const LetterShadow: React.FC<LetterShadowProps> = ({letter, dragElem, isRightHov
         e.preventDefault()
         if(isRightHover){
             e.currentTarget.classList.remove('letter-light')
+            e.currentTarget.classList.remove('letter-shadow')
             e.currentTarget.classList.add('done')
         }
     }

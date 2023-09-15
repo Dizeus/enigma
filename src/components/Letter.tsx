@@ -3,10 +3,12 @@ import React, {useState} from 'react';
 interface LetterProps {
     letter: string,
     setDragElem: (dragElem: HTMLDivElement | null)=>void,
-    isRightHover: boolean
-    setIsRightHover: (isRightHover:boolean)=>void
+    isRightHover: boolean,
+    setIsRightHover: (isRightHover:boolean)=>void,
+    setLock: (lock: number)=>void,
+    lock: number
 }
-const Letter: React.FC<LetterProps> = ({letter, setDragElem, isRightHover, setIsRightHover}) => {
+const Letter: React.FC<LetterProps> = ({letter, setDragElem, isRightHover, setIsRightHover, setLock, lock}) => {
 
     const dragStartHandler = (e: React.DragEvent<HTMLDivElement>)=>{
         setDragElem(e.currentTarget)
@@ -15,8 +17,8 @@ const Letter: React.FC<LetterProps> = ({letter, setDragElem, isRightHover, setIs
         e.preventDefault()
         setDragElem(null)
         if(isRightHover){
-            console.log('here')
-            e.currentTarget.classList.add('positioned')
+            e.currentTarget.classList.add('hide')
+            setLock(lock+1)
         }
         setIsRightHover(false)
     }
